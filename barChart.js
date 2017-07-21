@@ -65,7 +65,40 @@ svg.selectAll(".bar")
   .attr("class", "bar")
   .attr("width", function(d) { return xScale(d["endangeredLanguages"]); })
   .attr("y", function(d) { return yScale(d["country"]); })
-  .attr("height", yScale.rangeBand());
+  .attr("fill", "#2c7bb6")
+  .attr("height", yScale.rangeBand())
+  .on("mouseover", function(d) {
+  /* Moving the mouse over a bar causes its colour to change to red (#d7191c). 
+     A tooltip with the number of endangered languages appears on the 
+     aforementioned bar. */
+
+    // Bar colour is set to red.   
+    d3.select(this)
+        .attr("fill", "#d7191c");
+
+    // Tooltip position is determined using bar's coordinates.
+    var xPosition = parseFloat(d3.select(this).attr("width") - 15);
+    var yPosition = parseFloat(d3.select(this).attr("y"))+ yScale.rangeBand() / 2 + 5;
+
+    // Tooltip containing number of endangered languages is created and positioned.
+    svg.append("text")
+       .attr("id", "tooltip")
+       .attr("x", xPosition)
+       .attr("y", yPosition)
+       .attr("text-anchor", "middle")
+       .attr("fill", "white")
+       .text(d["endangeredLanguages"]);  
+  })
+  .on("mouseout", function(d) {
+  /* On a mouseout event the bar's original colour is restored and the tooltip removed.
+     A 250-ms transition makes the colour change smooth. */
+
+    d3.select(this)
+        .transition()
+        .duration(250)
+        .attr("fill", "#2c7bb6");
+    d3.select("#tooltip").remove();
+  });
 });
 
 // Responsive behaviour is implemented via resize function.
