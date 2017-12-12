@@ -2,6 +2,8 @@
 
 A responsive horizontal bar chart implemented with D3.js version 3.x.
 
+You can see the bar chart here: https://leandrocollares.github.io/responsive-bar-chart/
+
 ## Getting started
 
 * Clone or download the repository. 
@@ -18,13 +20,3 @@ A responsive horizontal bar chart implemented with D3.js version 3.x.
 ## Data source
 
 The United Nations Education, Scientific and Cultural Organization (UNESCO) publishes a list of endangered languages regularly. The bar chart is based on data extracted from that list.
-
-
-
-
-
-
-
-
-
-
