@@ -19,4 +19,10 @@ You can see the bar chart here: https://leandrocollares.github.io/responsive-bar
 
 ## Data source
 
-The United Nations Education, Scientific and Cultural Organization (UNESCO) publishes a list of endangered languages regularly. The bar chart is based on data extracted from that list.
+The United Nations Education, Scientific and Cultural Organization (UNESCO) publishes a list of endangered languages regularly. The bar chart is based on UNESCO data made available by The Guardian via a Datablog [post](https://www.theguardian.com/news/datablog/2011/apr/15/language-extinct-endangered#data).
+
+
+
+
+
+
