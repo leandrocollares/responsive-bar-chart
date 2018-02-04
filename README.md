@@ -2,8 +2,6 @@
 
 A responsive horizontal bar chart implemented with D3.js version 3.x.
 
-You can see the bar chart here: https://leandrocollares.github.io/responsive-bar-chart/
-
 ## Getting started
 
 * Clone or download the repository. 
